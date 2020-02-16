@@ -31,3 +31,14 @@ Então para a gente criar a RegEx para satisfazer o que foi dito no primeiro par
 * **Ninja-S**asuke
 
 Ele dá match só nos dois últimos
+
+
+## 5. Range
+
+É possível também definir intervalos de caracteres. Se por acaso fosse necessário validar um nome onde a regra é que o primeiro caracter seja uma letra, e os demais podem ser qualquer coisa, não seria interessante criar uma lista e pôr todas as letras do alfabeto nele, assim: **[abcdefg...]**.
+
+Nesses casos podemos informar o intervalo que queremos pôr na lista, utilizando o hífen(**-**) para delimitar os extremos.
+
+Então para aceitar todas as letras do alfabeto seria: **/[a-z]-nome/g**. No entanto, dessa maneira ele só consideraria a primeira letra minúscula. Para a gente fazer com que aceite ambos, ou adicionamos o **i** (insensitive) no final da expressão *(se optar por esta maneira, todos o texto será tratado dessa maneira, não só o primeiro caracter)* ou a gente adiciona o range das letras maiúsculas na lista, desta maneira: **/[a-zA-Z]-nome/g**
+
+Os intervalos são definidos por nós. Se a gente quiser letras minúsculas de *a* até *j* e maiúsculas de *k* até *z* basta informar esses ranges na expressão regular.
