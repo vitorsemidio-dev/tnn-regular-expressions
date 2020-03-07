@@ -62,3 +62,12 @@ Para definir a quantidade exata de dígitos que deseja é necessário pôr o nú
 - A regEx **/[0-9]{11}/** na sequência numérica *0101010101001010101010* dá 2 matches
 - A regEx **/[a-z]{5,6}/** no texto *neji naruto sasuke sakura shikamaru* dá 4 matches
 - A regEx **/[a-z]{7,}/** no texto *neji naruto sasuke sakura shikamaru* dá 1 match
+
+## 7 Metacaracteres
+
+* **\d** match em qualquer dígito [0-9]
+* **\w** match qualquer letra, dígitos e underline (a-z, A-Z e _)
+* **\s** match em espeços em branco (espaço, tab, ...)
+* **\t** match em tabs
+
+[Link de lista](https://www.w3schools.com/jsref/jsref_obj_regexp.asp)
