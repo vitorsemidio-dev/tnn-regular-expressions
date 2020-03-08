@@ -6,6 +6,9 @@ const inputs = document.querySelectorAll('input');
 
 const patterns = {
   telephone: /^\d{11}$/,
+  username: /^[a-z\d]{5,12}$/,
+  password: /^[\w@-]{8,20}$/,
+  slug: /^[a-z\d-]{8,20}$/,
 }
 
 // validation funciton
