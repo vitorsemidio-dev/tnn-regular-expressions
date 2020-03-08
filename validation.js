@@ -10,10 +10,13 @@ const patterns = {
 
 // validation funciton
 function validate(field, regEx) {
-  console.log(regEx.test(field.value), field);
+  if(regEx.test(field.value)) {
+    field.className = 'valid';
+  } else {
+    field.className = 'invalid';
+  }
 }
 
 inputs.forEach(input => input.addEventListener('keyup', (e => {
-  // console.log(e.target.attributes.name.value);
   validate(e.target, patterns[e.target.attributes.name.value]);
 })))
