@@ -5,9 +5,15 @@
 const inputs = document.querySelectorAll('input');
 
 const patterns = {
-  telefone: /^\d{11}$/,
+  telephone: /^\d{11}$/,
+}
+
+// validation funciton
+function validate(field, regEx) {
+  console.log(regEx.test(field.value), field);
 }
 
 inputs.forEach(input => input.addEventListener('keyup', (e => {
-  console.log(e.target.attributes.name.value);
+  // console.log(e.target.attributes.name.value);
+  validate(e.target, patterns[e.target.attributes.name.value]);
 })))
